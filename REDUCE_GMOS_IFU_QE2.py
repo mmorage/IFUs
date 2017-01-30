@@ -38,113 +38,20 @@ gmos.gfextract.line=100
 gmos.gfextract.nsum=10
 gfreduce.line=100
 
-#Running BIAS and OVERSCAN PARA CORREGIR DEFECTOS EN TODAS LAS IMAGENES
+#Running BIAS and OVERSCAN in all images aiming at the correction of the bad columns on the CCDs
 
-#iraf.gfreduce(inimages=imagen_in,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
+iraf.gfreduce(inimages=imagen_in,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
 
-#iraf.gfreduce(inimages=ARC,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
+iraf.gfreduce(inimages=ARC,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
 
-#iraf.gfreduce(inimages=FLAT,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
+iraf.gfreduce(inimages=FLAT,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
 
  
-#run script german!
-
-####FLAT for reference
-#
-#   iraf.gfreduce(inimages =                
-#   (outimages = "")          
-#     (outpref = "default")   
-#       (slits = "header")    
-#     (exslits = "*")         
-#(fl_nodshuffl = no)          
-#    (fl_inter = yes)         
-#    (fl_vardq = no)          
-#   (fl_addmdf = yes)         
-#     (fl_over = yes)         
-#     (fl_trim = yes)         
-#     (fl_bias = yes)         
-#  (fl_scatsub = no)          
-#   (fl_qecorr = no)          
-#  (fl_gscrrej = yes)         
-#   (fl_crspec = no)          
-#(fl_gnsskysub = no)          
-#  (fl_extract = yes)         #
-#(fl_gsappwave = yes)        # 
-#  (fl_wavtran = yes)         
-#   (fl_skysub = yes)         
-#  (fl_fluxcal = yes)         
-#   (fl_fulldq = no)          
-#    (dqthresh = 0.1)         
-#     (rawpath = "")          
-#     (key_mdf = "")          
-#     (mdffile = "default")   
-#      (mdfdir = "gmos$data/")
-# (key_biassec = "BIASSEC")   
-# (key_datasec = "DATASEC")   
-#     (bpmfile = "gmos$data/chipgaps.dat") Bad pixel mask for column interpolation
-#        (grow = 1.0)            
-#        (bias = "")             
-#   (reference = "")             
-#   (sc_xorder = "1")            
-#   (sc_yorder = "3")            
-#    (sc_cross = no)             
-#    (qe_refim = "")             
-#(fl_keep_qeim = no)             
-# (qe_corrpref = "qecorr")       
-#(qe_corrimage = "")             
-#(qe_data = "gmosQEfactors.dat") 
-#  (qe_datadir = "gmos$data/")   
-#    (response = "")             
-#  (wavtraname = "")             
-#   (sfunction = "")             
-#  (extinction = "")             
-#    (fl_fixnc = no)             
-#  (fl_fixgaps = no)             
-#   (fl_novlap = yes)            
-#    (perovlap = 10.0)           
-# (nbiascontam = "default")      
-#    (biasrows = "default")      
-#       (order = "default")      
-#  (low_reject = 3.0)            
-# (high_reject = 3.0)            
-#    (niterate = 2)              
-#   (cr_xorder = 9)              
-#  (cr_sigclip = 4.5)            
-#  (cr_sigfrac = 0.5)            
-#   (cr_objlim = 1.0)            
-#    (cr_niter = 4)              
-#        (line = 100)            
-#        (nsum = 10)             
-#       (trace = yes)            
-#    (recenter = yes)            
-#      (thresh = 200.0)          
-#    (function = "chebyshev")    
-#     (t_order = 5)              
-#      (t_nsum = 10)             
-#     (weights = "variance")     
-#   (gratingdb = "gmos$data/GMOSgratings.dat") Gratings database file
-#    (filterdb = "gmos$data/GMOSfilters.dat") Filters database file
-#     (xoffset = INDEF)          
-#        (expr = "default")      
-#    (sepslits = no)             
-#          (w1 = INDEF)          
-#          (w2 = INDEF)          
-#          (dw = INDEF)          
-#          (nw = INDEF)          
-# (observatory = "default")      
-#     (sci_ext = "SCI")          
-#     (var_ext = "VAR")          
-#      (dq_ext = "DQ")           
-#     (logfile = "")             
-#     (verbose = yes)            
-#      (status = 0)              
-#    (scanfile = )               
-#        (mode = "al")           #
-
+#run cl script from German Gimeno that corrects the bad columns on the Amplifiers. 
 
 
 ###############
-# ##
+# ## OLD
 # ##
 # ##iraf.gfreduce(inimages=FLAT,outpref='default',fl_inter='no',fl_vardq='yes',fl_addmdf='yes',fl_over='yes',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',fl_gsappwave='no',fl_fluxcal='no',fl_fulldq='no',fl_fixgap='no',line=100,nsum=10)
 # ##
@@ -160,6 +67,8 @@ iraf.gfreduce(inimages=FLATg,outpref='REF_FLAT_',fl_inter='yes',fl_vardq='no',fl
 
  
 #################################################################################################################### 
+# OLD
+#
 #  ###Scattered light subtraction
 #
 #  ##image= imagen bias y trimmed... i.e rgS.....
@@ -186,48 +95,49 @@ iraf.gfreduce(inimages=FLATg,outpref='REF_FLAT_',fl_inter='yes',fl_vardq='no',fl
 
 ARCg='rrg'+ARC[:-5]+'_tmp.fits'
 
-#iraf.gfreduce(inimages=ARCg,outpref='ARC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',fl_extract='yes',bias=SBias,fl_bias='no',orde='1',weight="none",fl_gsappwave='no',fl_fluxcal='no',ref='REF_FLAT_'+FLATg,fl_fulldq='yes')
+iraf.gfreduce(inimages=ARCg,outpref='ARC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',fl_extract='yes',bias=SBias,fl_bias='no',orde='1',weight="none",fl_gsappwave='no',fl_fluxcal='no',ref='REF_FLAT_'+FLATg,fl_fulldq='yes')
 
-
-#iraf.gswavelength(inimages='ARC_'+ARCg,coordlist='CuAr_GMOS.dat',fl_inter='yes')
+#wavelenght calibration
+iraf.gswavelength(inimages='ARC_'+ARCg,coordlist='CuAr_GMOS.dat',fl_inter='yes')
  
 ##Apply QE to the FLATS
 #################
-#
+# OLD
 #####iraf.gqecorr(inimages='b_rg'+FLAT,refimages='ARC_'+ARC[:-5],qecorr_data="gmosQEfactors.dat") 
 #
 #######################
 FLATg='rrg'+FLAT[:-5]+'_tmp.fits'
 
-#iraf.gqecorr(inimages=FLATg,outpref='q_',refimages='ARC_'+ARCg[:-5],qecorr_data="gmosQEfactors.dat") 
+iraf.gqecorr(inimages=FLATg,outpref='q_',refimages='ARC_'+ARCg[:-5],qecorr_data="gmosQEfactors.dat") 
 
 
 ##############################################################################
 #  ###Repitiendo la extraccion con el flat corregido por scattered qb_rg...
-#
+# OLD
 #  ####iraf.gfreduce(inimages='qtest_rg'+FLAT,outpref='FLAT_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',fl_extract='yes',bias=SBias,fl_bias='yes',fl_gsappwave='yes',fl_fluxcal='no',ref='REF_FLAT_'+FLAT,fl_fulldq='yes',fl_fixgap='no')
 #################################################################################
 
-#iraf.gfreduce(inimages='q_'+FLATg,outpref='FLAT_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',fl_extract='yes',bias=SBias,fl_bias='yes',fl_gsappwave='yes',fl_fluxcal='no',ref='REF_FLAT_'+FLATg,fl_fulldq='yes',fl_fixgap='no')
+iraf.gfreduce(inimages='q_'+FLATg,outpref='FLAT_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_wavtran='no',fl_skysub='no',trace='no',recenter='no',fl_extract='yes',bias=SBias,fl_bias='yes',fl_gsappwave='yes',fl_fluxcal='no',ref='REF_FLAT_'+FLATg,fl_fulldq='yes',fl_fixgap='no')
 
 ###haciendo el responso... normalizando el flat
 
 ####################################################
-##  
+##  RESPONSE. IT works sometimes, It deppends on the data
+##
 ##  iraf.gfresponse(inimage='FLAT_qb_rg'+FLAT,outimage='RESP_'+FLAT,skyimage="",fl_inter='yes',function='spline3',order='45',sample="*",wavtraname='ARC_'+ARC[:-5])
 ##  iraf.gfresponse(inimage='FLAT_q_rg'+FLAT,outimage='RESP_'+FLAT,skyimage="",fl_inter='yes',function='spline3',order='45',sample="*",wavtraname='ARC_'+ARC[:-5]) 
 ##
 ##########################################################
 
-#OK
+#OK Check the iraf version here: The first one is for the standard gfresponse, the second one for the developer version from Gemini
 
 #iraf.gfresponse(inimage='FLAT_q_'+FLATg,outimage='RESP_'+FLATg,skyimage="",fl_inter='yes',function='spline3',order='45',sample="*") 
-#iraf.gfresponse(inimage='FLAT_q_'+FLATg,outimage='RESP_'+FLATg,skyimage="",fl_inter='yes',function='spline3',order='45',sample="*",wavtraname='ARC_'+ARCg[:-5]) 
+iraf.gfresponse(inimage='FLAT_q_'+FLATg,outimage='RESP_'+FLATg,skyimage="",fl_inter='yes',function='spline3',order='45',sample="*",wavtraname='ARC_'+ARCg[:-5]) 
 
 
 
 ###############################################################
-#
+# OLD
 # #### Preparando para remover scattered light from the science
 # #### Primero corriendo gfreduce en Science solamente con rg ,es decir gprepared bias trimed y 
 # 
@@ -241,34 +151,26 @@ FLATg='rrg'+FLAT[:-5]+'_tmp.fits'
 # ##output b
 # 
 ########################################################################
-##correr cleanning de cosmicos.... aqui A ver como se agrega al script...
 
-##Corregir los defectos del los CCDs
+#RUN CCDCLEANING
+
+#see and run limpia_cosmicos_parall.py (require lacosmic from Van Dokkum and parallel python)
 
 imagen_ing='rrg'+imagen_in[:-5]+'_tmp_CC2.fits'
 
  
-##correr QE correction a la sciencia:
+#Quantum efficiency correction  to science (QE correction):
 
-#iraf.gqecorr(inimages=imagen_ing[:-5],outpref='q_',refimages='ARC_'+ARCg[:-5],qecorr_data='gmosQEfactors.dat')  
+iraf.gqecorr(inimages=imagen_ing[:-5],outpref='q_',refimages='ARC_'+ARCg[:-5],qecorr_data='gmosQEfactors.dat')  
  
 
-#EXTRACCION TOTAL!!!
+#TOTAL EXTRACTION!!!
 
 FLATg='rrg'+FLAT[:-5]+'_tmp.fits'
 ARCg='rrg'+ARC[:-5]+'_tmp.fits'
 
-#iraf.gfreduce(inimages='q_'+imagen_ing,outpref='SC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_extract='yes',fl_gsappwave='yes',fl_wavtran='yes',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',orde='1',weight="none",fl_fluxcal='no',ref='FLAT_q_'+FLATg,response='RESP_'+FLATg,wavtraname='ARC_'+ARCg[:-5],fl_fulldq='yes') 
+iraf.gfreduce(inimages='q_'+imagen_ing,outpref='SC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_extract='yes',fl_gsappwave='yes',fl_wavtran='yes',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',orde='1',weight="none",fl_fluxcal='no',ref='FLAT_q_'+FLATg,response='RESP_'+FLATg,wavtraname='ARC_'+ARCg[:-5],fl_fulldq='yes') 
 
+#####
+# Sky subtraction needs to be done. Not in this pipeline, since needs carefully checking....
 
-
-
-
-##iraf.gfreduce(inimages='q_brg'+imagen_in,outpref='SC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_extract='yes',fl_gsappwave='yes',fl_wavtran='yes',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',orde='1',weight="none",fl_fluxcal='no',ref='FLAT_qb_rg'+FLAT,response='RESP_test'+FLAT,wavtraname='ARC_'+ARC[:-5],fl_fulldq='yes') 
-
-
-##iraf.gfreduce(inimages='qbrg'+imagen_in,outpref='SC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_extract='yes',fl_gsappwave='yes',fl_wavtran='yes',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',orde='1',weight="none",fl_fluxcal='no',ref='FLAT_qb_rg'+FLAT,response='RESPONSE_TEST.fits',wavtraname='ARC_'+ARC[:-5],fl_fulldq='yes') 
-
-##iraf.gfreduce(inimages=imagen_in,outpref='SC_',fl_inter='no',fl_vardq='no',fl_addmdf='no',fl_over='no',fl_trim='no',fl_gscrrej='no',fl_extract='yes',fl_gsappwave='yes',fl_wavtran='yes',fl_skysub='no',trace='no',recenter='no',bias=SBias,fl_bias='yes',orde='1',weight="none",fl_fluxcal='no',ref='FLAT_qb_rg'+FLAT,response='RESPONSE_TEST.fits',wavtraname='ARC_'+ARC[:-5],fl_fulldq='yes') 
-
-##Sky subtraction:
